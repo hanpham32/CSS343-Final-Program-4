@@ -4,7 +4,7 @@
 
 #ifndef PROGRAM4PHAMCHEN_BINARYSEARCHTREE_H
 #define PROGRAM4PHAMCHEN_BINARYSEARCHTREE_H
-#include "Movie.h"
+#include "Movies/Movie.h"
 #include <string>
 #include <stdio.h>
 #include <iostream>

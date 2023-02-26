@@ -6,7 +6,7 @@
 #define PROGRAM4PHAMCHEN_DRAMA_H
 
 #include <String>
-#include "movie.h"
+#include "Movie.h"
 #include <iostream>
 #include <fstream>
 

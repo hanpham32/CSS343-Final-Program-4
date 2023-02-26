@@ -9,7 +9,7 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-#include "Movie.h"
+#include "../Movies/Movie.h"
 
 class Customer {
     public:

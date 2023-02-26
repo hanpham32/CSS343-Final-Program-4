@@ -5,7 +5,7 @@
 #ifndef PROGRAM4PHAMCHEN_HASHTABLE_H
 #define PROGRAM4PHAMCHEN_HASHTABLE_H
 
-#include "customer.h"
+#include "Customers/customer.h"
 
 int const row = 100;
 int const column = 200;
