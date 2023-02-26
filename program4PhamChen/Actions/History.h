@@ -7,6 +7,7 @@
 
 class History {
 
+public:
   bool Execute();
 };
 

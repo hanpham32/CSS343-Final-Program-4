@@ -7,6 +7,7 @@
 
 class Return {
 
+public:
   bool Execute();
 };
 

@@ -6,6 +6,8 @@
 #define BORROW_H_
 
 class Borrow {
+
+public:
   bool Execute();
 };
 

@@ -7,6 +7,7 @@
 
 class Inventory {
 
+public:
   bool Execute();
 };
 

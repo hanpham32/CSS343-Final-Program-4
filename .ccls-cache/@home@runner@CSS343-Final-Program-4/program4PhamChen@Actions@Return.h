@@ -7,10 +7,8 @@
 
 class Return {
 
+public:
   bool Execute();
-  class Borrow {
-    bool Execute();
-  };
 };
 
 #endif
