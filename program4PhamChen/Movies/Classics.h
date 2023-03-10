@@ -5,10 +5,16 @@
 #ifndef PROGRAM4PHAMCHEN_CLASSICS_H
 #define PROGRAM4PHAMCHEN_CLASSICS_H
 
+#include <string>
+#include "Movie.h"
 
-class Classics {
+using namespace std;
 
+class Classics : public Movie
+{
+protected:
+    string major_actor;
+    int date;
 };
 
-
-#endif //PROGRAM4PHAMCHEN_CLASSICS_H
+#endif // PROGRAM4PHAMCHEN_CLASSICS_H
