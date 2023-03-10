@@ -4,22 +4,25 @@
 
 #include "Hashtable.h"
 
-Hashtable::Hashtable() {
-
+Hashtable::Hashtable()
+{
 }
 
-Hashtable::~Hashtable() {
-
+Hashtable::~Hashtable()
+{
 }
 
-Customer *Hashtable::retrieveCustomer(const int &) const {
+Customer *Hashtable::retrieveCustomer(const int &) const
+{
     return nullptr;
 }
 
-bool Hashtable::addCustomer(Customer *newCustomer) {
+bool Hashtable::addCustomer(Customer *newCustomer)
+{
     return false;
 }
 
-bool Hashtable::removeCustomer(const int &) {
+bool Hashtable::removeCustomer(const int &)
+{
     return false;
 }
