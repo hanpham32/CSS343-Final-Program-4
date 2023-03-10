@@ -5,10 +5,10 @@
 #ifndef PROGRAM4PHAMCHEN_COMEDY_H
 #define PROGRAM4PHAMCHEN_COMEDY_H
 
+#include "Movie.h"
 
-class Comedy {
-
+class Comedy : public Movie
+{
 };
 
-
-#endif //PROGRAM4PHAMCHEN_COMEDY_H
+#endif // PROGRAM4PHAMCHEN_COMEDY_H

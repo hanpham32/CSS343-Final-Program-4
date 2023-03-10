@@ -10,18 +10,18 @@
 int const row = 100;
 int const column = 200;
 
-class Hashtable {
+class Hashtable
+{
 
-    public:
-        Hashtable();        //  constructor
-        ~Hashtable();       //  destructor
-        Customer *retrieveCustomer(const int&) const;
-        bool addCustomer(Customer* newCustomer);
-        bool removeCustomer(const int&);
+public:
+    Hashtable();  //  constructor
+    ~Hashtable(); //  destructor
+    Customer *retrieveCustomer(const int &) const;
+    bool addCustomer(Customer *newCustomer);
+    bool removeCustomer(const int &);
 
-    private:
+private:
     Customer *customerTable[row][column];
 };
 
-
-#endif //PROGRAM4PHAMCHEN_HASHTABLE_H
+#endif // PROGRAM4PHAMCHEN_HASHTABLE_H

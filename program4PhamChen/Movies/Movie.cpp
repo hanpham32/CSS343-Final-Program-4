@@ -4,22 +4,30 @@
 
 #include "Movie.h"
 
-bool Movie::increaseStock() {
-    return false;
+// Movie::~Movie() {}
+
+void Movie::increaseStock()
+{
+    stock++;
 }
 
-bool Movie::decreaseStock() {
-    return false;
+void Movie::decreaseStock()
+{
+    stock--;
 }
 
-int Movie::getStock() {
-    return 0;
+int Movie::getStock()
+{
+    return stock;
 }
 
-void Movie::parseString(const string &movieInfo) {
-
-}
-
-Movie::Movie() {
-
+void Movie::parseString(string &movieInfo)
+{
+    string str;
+    stringstream ss(movieInfo);
+    while (getline(ss, str, ','))
+    {
+        std::cout << str << std::endl;
+    }
+    // genre = movieInfo[0];
 }
