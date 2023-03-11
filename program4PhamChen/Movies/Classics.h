@@ -7,14 +7,22 @@
 
 #include <string>
 #include "Movie.h"
-
-using namespace std;
+#include <iostream>
+#include <fstream>
 
 class Classics : public Movie
 {
-protected:
-    string major_actor;
-    int date;
+public:
+    ~Classics();
+    std::string getMajorActor() const;
+    int getDate() const;
+
+    void print(ostream &os) const override;
+    void parseString(string &) override;
+
+private:
+    std::string major_actor_;
+    int date_;
 };
 
 #endif // PROGRAM4PHAMCHEN_CLASSICS_H
