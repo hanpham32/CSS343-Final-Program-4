@@ -3,3 +3,5 @@
 //
 
 #include "Drama.h"
+
+Drama::~Drama() {}

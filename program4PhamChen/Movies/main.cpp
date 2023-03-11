@@ -1,19 +1,26 @@
 #include <iostream>
 #include "Movie.h"
-// #include "Drama.h"
-// #include "Comedy.h"
-// #include "Classics.h"
+#include "Drama.h"
+#include "Comedy.h"
+#include "Classics.h"
 
 using namespace std;
 
 int main()
 {
-    // Classics c_movie;
-    // Comedy f_movie;
+    Classics c_movie;
+    Comedy f_movie;
+    Drama d_movie;
 
-    string movie_line = "F, 10, Nora Ephron, You've Got Mail, 1998";
-    // f_movie.parseString(movie_line);
-    Movie M;
-    // M.parseString(movie_line);
+    string movie_line1 = "F, 10, Nora Ephron, You've Got Mail, 1998";
+    string movie_line2 = "D, 10, Steven Spielberg, Schindler's List, 1993";
+    string movie_line3 = "C, 10, George Cukor, Holiday, Katherine Hepburn 9 1938";
+
+    f_movie.parseString(movie_line1);
+    d_movie.parseString(movie_line2);
+    c_movie.parseString(movie_line3);
+    cout << f_movie << endl;
+    cout << d_movie << endl;
+    cout << c_movie << endl;
     cout << "Hello World!" << endl;
 }

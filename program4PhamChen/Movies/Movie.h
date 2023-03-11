@@ -10,6 +10,7 @@
 #include <fstream>
 #include <sstream>
 #include <iomanip>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -17,22 +18,32 @@ class Movie
 {
 public:
     // virtual string createMovie() const = 0;
-    virtual ~Movie() = default;
+    virtual ~Movie();
     void increaseStock();
     void decreaseStock();
-    int getStock();
+    virtual void print(ostream &) const;
     // virtual bool operator==(const Movie *other);
     // virtual bool operator!=(const Movie *other);
     // virtual bool operator>(const Movie *other);
     // virtual bool operator<(const Movie *other);
-    virtual void parseString(string &movieInfo);
+    friend std::ostream &operator<<(std::ostream &os, const Movie &movie);
+
+    // read line and parse movie info
+    virtual void parseString(string &);
+
+    // ACCESSORS
+    char getGenre() const;
+    int getStock() const;
+    string getDirector() const;
+    string getTitle() const;
+    int getYear() const;
 
 protected:
-    char genre;
-    int stock;
-    string director;
-    string title;
-    int year;
+    char genre_;
+    int stock_;
+    string director_;
+    string title_;
+    int year_;
 };
 
 #endif // PROGRAM4PHAMCHEN_MOVIE_H

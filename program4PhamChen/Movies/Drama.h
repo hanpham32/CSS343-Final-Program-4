@@ -13,14 +13,13 @@
 class Drama : public Movie
 {
 public:
-    static const char GENRE = 'D';
-
-    Drama(const string &);
-    Drama(const string &, const string &);
     virtual ~Drama();
+    const char GENRE = 'D';
+    // Drama(const string &);
+    // Drama(const string &, const string &);
 
-    virtual string createMovie() const;
-    virtual string createHistory() const;
+    // virtual string createMovie() const;
+    // virtual string createHistory() const;
 };
 
 #endif // PROGRAM4PHAMCHEN_DRAMA_H
