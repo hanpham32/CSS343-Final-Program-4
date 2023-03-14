@@ -5,24 +5,21 @@
 #ifndef PROGRAM4PHAMCHEN_DRAMA_H
 #define PROGRAM4PHAMCHEN_DRAMA_H
 
-#include <String>
+#include <string>
 #include "Movie.h"
 #include <iostream>
 #include <fstream>
 
-class Drama : public Movie {
-    public:
-    static const char GENRE = 'D';
-
-    Drama(const string&);
-    Drama(const string&, const string&);
+class Drama : public Movie
+{
+public:
     virtual ~Drama();
+    const char GENRE = 'D';
+    // Drama(const string &);
+    // Drama(const string &, const string &);
 
-    virtual string createMovie() const;
-    virtual string createHistory() const;
-
-
+    // virtual string createMovie() const;
+    // virtual string createHistory() const;
 };
 
-
-#endif //PROGRAM4PHAMCHEN_DRAMA_H
+#endif // PROGRAM4PHAMCHEN_DRAMA_H

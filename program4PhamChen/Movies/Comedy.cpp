@@ -3,3 +3,5 @@
 //
 
 #include "Comedy.h"
+
+Comedy::~Comedy() {}

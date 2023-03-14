@@ -5,10 +5,21 @@
 #ifndef PROGRAM4PHAMCHEN_COMEDY_H
 #define PROGRAM4PHAMCHEN_COMEDY_H
 
+#include <string>
+#include "Movie.h"
+#include <iostream>
+#include <fstream>
 
-class Comedy {
+class Comedy : public Movie
+{
+public:
+    virtual ~Comedy();
+    const char GENRE = 'D';
+    // Drama(const string &);
+    // Drama(const string &, const string &);
 
+    // virtual string createMovie() const;
+    // virtual string createHistory() const;
 };
 
-
-#endif //PROGRAM4PHAMCHEN_COMEDY_H
+#endif // PROGRAM4PHAMCHEN_COMEDY_H
