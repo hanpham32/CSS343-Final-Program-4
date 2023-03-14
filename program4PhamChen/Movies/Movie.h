@@ -16,17 +16,19 @@ using namespace std;
 
 
 class Movie {
-    public:
-    virtual ~Movie() {};
 
-    virtual string createMovie() const = 0;
-    virtual bool increaseStock();
-    virtual bool decreaseStock();
-    virtual int getStock();
-    virtual bool operator== (const Movie* other) const = 0;
-    virtual bool operator!= (const Movie* other) const = 0;
-    virtual bool operator> (const Movie* other) const = 0;
-    virtual bool operator< (const Movie* other) const = 0;
+    friend ostream& operator<<(ostream& output, const Movie& input);    // output operator for Movie
+
+    public:
+        enum MOVIES {COMEDY, CLASSIC, DRAMA};
+        virtual ~Movie() {};                        //  constructor
+
+        virtual string createMovie() const = 0;     //  pure virtual createMovie to be inherited
+        virtual int getStock();
+        virtual bool operator== (const Movie* other) const = 0;
+        virtual bool operator!= (const Movie* other) const = 0;
+        virtual bool operator> (const Movie* other) const = 0;
+        virtual bool operator< (const Movie* other) const = 0;
 
     protected:
         Movie();
