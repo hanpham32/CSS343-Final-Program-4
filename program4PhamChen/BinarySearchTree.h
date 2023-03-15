@@ -13,12 +13,13 @@ template<class ItemType>
 class BinarySearchTree {
 
 public:
-    BinarySearchTree();                                     //  Constructor
-                    ~BinarySearchTree();                    //  Destructor
-    void makeEmpty();                                       //  Method to empty BST
-Movie* retrieve(const Movie*);                              //  Retrieve method to return movie pointer
-    bool insert(Movie*);                                    //  Inserting a new movie into the BST
-    void display() const;                                   //  Display tree of movies (will be used for inventory)
+    BinarySearchTree<ItemType>();                                           //  Constructor
+    ~BinarySearchTree<ItemType>(const ItemType& root);                      //  Destructor
+    BinarySearchTree<ItemType>(const BinarySearchTree<ItemType>& other);
+    void makeEmpty();                                                       //  Method to empty BST
+    Movie* retrieve(const Movie*);                                          //  Retrieve method to return movie pointer
+    bool insert(Movie*);                                                    //  Inserting a new movie into the BST
+    void display() const;                                                   //  Display tree of movies (will be used for inventory)
 
 
 private:

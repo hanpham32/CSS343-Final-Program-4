@@ -3,6 +3,7 @@
 //
 
 #include "Classics.h"
+<<<<<<< HEAD
 
 using namespace std;
 
@@ -59,3 +60,5 @@ void Classics::parseString(string &movieInfo)
     getline(ss, str, delim);
     year_ = stoi(str);
 }
+=======
+>>>>>>> ad1261bb5de4893fd5421bd339657b4a99aefeab

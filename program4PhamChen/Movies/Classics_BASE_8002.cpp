@@ -4,11 +4,9 @@
 
 #include "Classics.h"
 
-using namespace std;
-
 Classics::~Classics() {}
 
-string Classics::getMajorActor() const
+std::string Classics::getMajorActor() const
 {
     return major_actor_;
 }
@@ -28,7 +26,6 @@ void Classics::parseString(string &movieInfo)
 {
     string str;
     stringstream ss(movieInfo);
-    vector<string> vec;
 
     // parse genre
     getline(ss, str, ',');
@@ -47,15 +44,9 @@ void Classics::parseString(string &movieInfo)
     getline(ss, str, ',');
     title_ = str;
 
-    char delim = ' ';
     // parse major actor and release date and year
-    getline(ss, str, delim); // this is to ignore blank space in front
-    getline(ss, str, delim);
-    major_actor_ = str; // get first name
-    getline(ss, str, delim);
-    major_actor_ += str;
-    getline(ss, str, delim);
-    date_ = stoi(str);
-    getline(ss, str, delim);
-    year_ = stoi(str);
+    getline(ss, str, ',');
+    major_actor_ = str;
+
+    // TODO
 }

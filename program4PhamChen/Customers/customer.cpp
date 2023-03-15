@@ -4,12 +4,6 @@
 
 #include "customer.h"
 
-//
-// Created by Owner on 2/25/2023.
-//
-
-#include "customer.h"
-
 Customer::Customer() {
     setFirstName("");
     setLastName("");
@@ -59,13 +53,13 @@ int Customer::getLastName() const {
 }
 
 int Customer::hash() const {
-    
+
 }
 
 void Customer::updateHistory(string history) {
-    
+
 }
 
 ostream& operator<< (ostream & output, const Customer& other) {
-    
+
 }
