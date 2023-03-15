@@ -6,6 +6,9 @@
 #define PROGRAM4PHAMCHEN_HASHTABLE_H
 
 #include "Customers/customer.h"
+#include <iostream>
+#include <vector>
+#include <string>
 
 int const row = 100;
 int const column = 200;

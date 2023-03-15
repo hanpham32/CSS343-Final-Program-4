@@ -18,6 +18,10 @@ public:
     // Drama(const string &);
     // Drama(const string &, const string &);
 
+    bool operator==(const Movie *) override;
+    bool operator!=(const Movie *) override;
+    bool operator<(const Movie *) override;
+    bool operator>(const Movie *) override;
     // virtual string createMovie() const;
     // virtual string createHistory() const;
 };

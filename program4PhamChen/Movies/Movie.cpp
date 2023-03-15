@@ -28,6 +28,72 @@ std::ostream &operator<<(ostream &os, const Movie &movie)
     return os;
 }
 
+/// @brief this operator uses genre, director, title, and year to compare
+/// @param rhs
+/// @return return true if movie is same
+bool Movie::operator==(const Movie *rhs)
+{
+    bool isSameGenre = genre_ == rhs->getGenre();
+    bool isSameDirector = director_ == rhs->getDirector();
+    bool isSameTitle = title_ == rhs->getTitle();
+    bool isSameYear = year_ == rhs->getYear();
+    if (isSameGenre && isSameDirector && isSameTitle && isSameYear)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+bool Movie::operator!=(const Movie *rhs)
+{
+    return (this == rhs);
+}
+
+/// @brief this operator compares movie's stock
+/// @param rhs
+/// @return
+bool Movie::operator<(const Movie *rhs)
+{
+    // first check if movie we compare is the same
+    if (!(this == rhs))
+    {
+        std::cout << "Movie is not the same" << std::endl;
+        return false;
+    }
+    if (stock_ < rhs->getStock())
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+/// @brief this operator compares movie's stock
+/// @param rhs
+/// @return
+bool Movie::operator>(const Movie *rhs)
+{
+    // first check if movie we compare is the same
+    if (!(this == rhs))
+    {
+        std::cout << "Movie is not the same" << std::endl;
+        return false;
+    }
+    if (stock_ > rhs->getStock())
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
 void Movie::parseString(string &movieInfo)
 {
     string str;

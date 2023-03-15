@@ -22,10 +22,10 @@ public:
     void increaseStock();
     void decreaseStock();
     virtual void print(ostream &) const;
-    // virtual bool operator==(const Movie *other);
-    // virtual bool operator!=(const Movie *other);
-    // virtual bool operator>(const Movie *other);
-    // virtual bool operator<(const Movie *other);
+    virtual bool operator==(const Movie *other);
+    virtual bool operator!=(const Movie *other);
+    virtual bool operator>(const Movie *other);
+    virtual bool operator<(const Movie *other);
     friend std::ostream &operator<<(std::ostream &os, const Movie &movie);
 
     // read line and parse movie info
