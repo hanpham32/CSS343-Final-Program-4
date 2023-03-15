@@ -4,62 +4,76 @@
 
 #include "customer.h"
 
-Customer::Customer() {
+Customer::Customer()
+{
     setFirstName("");
     setLastName("");
     setCustomerID(0);
 }
 
-Customer::Customer(string firstName, string lastName, int ID) {
-    setFirstN(firstName);
-    setLastN(lastName);
+Customer::Customer(string firstName, string lastName, int ID)
+{
+    setFirstName(firstName);
+    setLastName(lastName);
     setCustomerID(ID);
 }
 
-Customer::~Customer() {
+Customer::~Customer()
+{
+    // WHY ARE WE DELETING NON POINTER OBJECTS?
     delete firstN;
     delete lastN;
     delete ID;
 }
 
-bool Customer::setCustomerID(int ID) {
-    if (ID.length == MAX_ID_SIZE) {
+bool Customer::setCustomerID(int ID)
+{
+    if (ID.length == MAX_ID_SIZE)
+    {
         this.customerID = ID;
         return true;
     }
-    else {return false;}        // invalid ID given
+    else
+    {
+        return false;
+    } // invalid ID given
 }
 
-bool Customer::setFirstN(string firstName) const {
+bool Customer::setFirstName(string firstName)
+{
     this->firstN = firstName;
     return true;
 }
 
-bool Customer::setLastN(string lastName) const {
+bool Customer::setLastName(string lastName)
+{
     this->lastN = lastName;
     return true;
 }
 
-int Customer::etCustomerID() const {
+int Customer::getCustomerID() const
+{
     return customerID;
 }
 
-int Customer::getFirstName() const {
+string Customer::getFirstName() const
+{
     return firstN;
 }
 
-int Customer::getLastName() const {
+string Customer::getLastName() const
+{
     return lastN;
 }
 
-int Customer::hash() const {
-
+int Customer::hash() const
+{
 }
 
-void Customer::updateHistory(string history) {
-
+void Customer::updateHistory(string history)
+{
 }
 
-ostream& operator<< (ostream & output, const Customer& other) {
-
+ostream &operator<<(ostream &output, const Customer &other)
+{
 }
