@@ -10,6 +10,7 @@
 #include <fstream>
 #include <sstream>
 #include <iomanip>
+#include <bits/stdc++.h>
 
 using namespace std;
 
